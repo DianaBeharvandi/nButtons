@@ -2,7 +2,7 @@ let winningButton;
 function getInputValue(){
   var inputVal = document.getElementById("myInput").value;          
   let n = inputVal;
-  winningButton = Math.floor(Math.random() * n);
+  winningButton = Math.ceil(Math.random() * n);
   console.log(winningButton);
   for (let i = 1; i <= n; ++i) {
     const buton = document.createElement("button")
