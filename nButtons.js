@@ -1,18 +1,18 @@
 let winningButton;
 function getInputValue(){
-var inputVal = document.getElementById("myInput").value;          
-let n = inputVal;
-winningButton = Math.floor(Math.random() * n);
-console.log(winningButton);
-for (let i = 1; i <= n; ++i) {
-  const buton = document.createElement("button")
-  document.querySelector("body").appendChild(buton)
-  buton.id = i
-  buton.innerText = "Button " +  i;
-  buton.addEventListener("click", onClick);
+  var inputVal = document.getElementById("myInput").value;          
+  let n = inputVal;
+  winningButton = Math.floor(Math.random() * n);
+  console.log(winningButton);
+  for (let i = 1; i <= n; ++i) {
+    const buton = document.createElement("button")
+    document.querySelector("body").appendChild(buton)
+    buton.id = i
+    buton.innerText = "Button " +  i;
+    buton.addEventListener("click", onClick);
+  }
 }
-}
-const onClick = function() {
+function onClick() {
   if (winningButton == this.id) {
     alert("Congratulations! You've guessed the button!")
   } else {
