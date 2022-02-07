@@ -1,5 +1,5 @@
 let winningButton;
-function getInputValue(){
+function getNumberOfButtons() {
   var inputVal = document.getElementById("myInput").value;          
   let n = inputVal;
   winningButton = Math.ceil(Math.random() * n);
