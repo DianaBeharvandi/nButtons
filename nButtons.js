@@ -1,4 +1,5 @@
 let winningButton;
+
 function getNumberOfButtons() {
   var inputVal = document.getElementById("myInput").value;          
   let n = inputVal;
@@ -11,12 +12,12 @@ function getNumberOfButtons() {
     buton.innerText = "Button " +  i;
     buton.addEventListener("click", onClick);
   }
-}
-function onClick() {
-  if (winningButton == this.id) {
-    alert("Congratulations! You've guessed the button!")
-  } else {
-     alert("Sorry! You Lost!")
+
+  function onClick() {
+    if (winningButton == this.id) {
+      alert("Congratulations! You've guessed the button!")
+    } else {
+      alert("Sorry! You Lost!")
+    }
   }
 }
-
