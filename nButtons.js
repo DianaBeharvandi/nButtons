@@ -11,8 +11,8 @@ const getWinningButton = function (n) {
 const getNumberOfButtons = function () {
   let n = inputVal();
   let winner = getWinningButton(n);
-  //console.log("n is ", n);
-  //console.log("winner is ", winner);
+  console.log("n is ", n);
+  console.log("winner is ", winner);
   for (let i = 1; i <= n; ++i) {
     const buton = document.createElement("button");
     document.querySelector("body").appendChild(buton);
@@ -27,10 +27,19 @@ const getNumberOfButtons = function () {
   }
 };
 
+const removeButtons = function () {
+  let n = document.querySelectorAll("button").length;
+  for (let i = 1; i < n; ++i) {
+    document.getElementById(i).remove(i);
+  }
+  console.log(n);
+};
+
 const onClick = function () {
   if (this.data == "true") {
     alert("Congratulations! You've guessed the button!");
   } else {
     alert("Sorry! You Lost!");
   }
+  removeButtons();
 };
